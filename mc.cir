@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-mc"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\mc.sim ] 
+
+** Creating circuit file "mc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../proiectfinal-pspicefiles/redled.lib" 
+* From [PSPICE NETLIST] section of C:\Users\stefa\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 50k 60k 1k 
+.MC 5 DC V([SENZ]) YMAX OUTPUT ALL SEED=200 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

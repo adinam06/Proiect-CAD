@@ -1,0 +1,1286 @@
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "praguri.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../proiectfinal-pspicefiles/redled.lib" 
+* From [PSPICE NETLIST] section of C:\Users\stefa\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10n 0 0 
+.STEP LIN PARAM r 50k 60k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECTFINAL
+R_R         0 N18852 R_R 120k TC=0,0 
+.model        R_R RES R=1 DEV=1% TC1=0 TC2=0
+R_R72         N194781 N25131 R_R72 0.2k TC=0,0 
+.model        R_R72 RES R=1 DEV=2% TC1=0 TC2=0
+R_Rs         0 SENZ  {r} TC=0,0 
+R_R4         0 N19310 R_R4 110k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+R_R8         VREF 0 R_R8 1k TC=0,0 
+.model        R_R8 RES R=1 DEV=2% TC1=0 TC2=0
+R_Rd1         N25874 COMP R_Rd1 0.3k TC=0,0 
+.model        R_Rd1 RES R=1 DEV=5% TC1=0 TC2=0
+V_V3         VCC 0 12V
+R_R6         N18960 COMP R_R6 1.2k TC=0,0 
+.model        R_R6 RES R=1 DEV=5% TC1=0 TC2=0
+R_R71         N25131 VCC R_R71 1k TC=0,0 
+.model        R_R71 RES R=1 DEV=2% TC1=0 TC2=0
+R_R2         N18868 DOM R_R2 110k TC=0,0 
+.model        R_R2 RES R=1 DEV=1% TC1=0 TC2=0
+R_R10         DOM N18960 R_R10 1k TC=0,0 
+.model        R_R10 RES R=1 DEV=5% TC1=0 TC2=0
+D_D4         N19118 VCC D1N4447 
+R_Rr         N19118 VCC  390 TC=0,0 
+X_U3A         N18960 0 VCC -VCC COMP TL082
+R_Rb         COMP N19346 R_Rb 18k TC=0,0 
+.model        R_Rb RES R=1 DEV=5% TC1=0 TC2=0
+Q_Q12         N19118 N19346 0 BC546B 
+R_R73         N194781 VREF R_R73 0.2k TC=0,0 
+.model        R_R73 RES R=1 DEV=2% TC1=0 TC2=0
+X_U2B         N19310 N18868 VCC -VCC DOM TL082
+R_R3         N19040 N19310 R_R3 11k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+V_V2         -VCC 0 -12V
+R_R1         VREF N18868 R_R1 11k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+D_D5         N25878 0 redled 
+X_U5A         SENZ N19040 VCC -VCC N19040 TL082
+Q_Q13         SENZ N18852 VCC BC556A 
+Q_Q14         N18852 N18852 VCC BC556A 
+R_Rd2         N25878 N25874 R_Rd2 0.11k TC=0,0 
+.model        R_Rd2 RES R=1 DEV=5% TC1=0 TC2=0
+.PARAM  r=50k
+
+**** RESUMING praguri.cir ****
+.END
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               redled          D1N4447         X_U3A.dx        X_U3A.dy        
+          IS    1.360000E-09    1.071000E-09  800.000000E-18  800.000000E-18 
+           N    5               1.698                                        
+         ISR                    2.149000E-09                                 
+          BV                  100                                            
+         IBV                  100.000000E-06                                 
+          RS    4.1024           .8383                          1.000000E-03 
+          TT                   11.540000E-09                                 
+         CJO                    2.000000E-12                   10.000000E-12 
+          VJ                     .5                                          
+           M                     .3333                                       
+
+
+               X_U2B.dx        X_U2B.dy        X_U5A.dx        X_U5A.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03                    1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC546B          BC556A          
+               NPN             PNP             
+       LEVEL    1               1            
+          IS    7.049000E-15    1.020000E-15 
+          BF  374.6           174.7          
+          NF    1               1            
+         VAF   62.79           73.79         
+         IKF     .08157          .1023       
+         ISE   68.000000E-15   10.730000E-15 
+          NE    1.576           1.644        
+          BR    1               4.432        
+          NR    1               1            
+         IKR    3.924           2.237        
+         ISC   12.400000E-15   14.740000E-15 
+          NC    1.835           1.296        
+          NK     .4767           .5033       
+         ISS    0               0            
+          RE    0               0            
+          RC     .9747          1.039        
+         CJE   11.500000E-12   30.000000E-12 
+         VJE     .5              .5          
+         MJE     .6715           .3333       
+         CJC    5.250000E-12    9.810000E-12 
+         VJC     .5697           .4865       
+         MJC     .3147           .332        
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  410.200000E-12  830.300000E-12 
+         XTF   40.06           10.32         
+         VTF   10              10            
+         ITF    1.491            .8981       
+          TR   10.000000E-09   10.000000E-09 
+         XTB    1.5             1.5          
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.2          
+           D     .87             .52         
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3A.jx1       X_U3A.jx2       X_U2B.jx1       X_U2B.jx2       
+               NJF             NJF             NJF             NJF             
+         VTO   -1              -1              -1              -1            
+        BETA  222.070000E-06  222.070000E-06  222.070000E-06  222.070000E-06 
+          IS  100.000000E-12  100.000000E-12  100.000000E-12  100.000000E-12 
+
+
+               X_U5A.jx1       X_U5A.jx2       
+               NJF             NJF             
+         VTO   -1              -1            
+        BETA  222.070000E-06  222.070000E-06 
+          IS  100.000000E-12  100.000000E-12 
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R             R_R72           R_R4            R_R8            
+           R    1               1               1               1            
+
+
+               R_Rd1           R_R6            R_R71           R_R2            
+           R    1               1               1               1            
+
+
+               R_R10           R_Rb            R_R73           R_R3            
+           R    1               1               1               1            
+
+
+               R_R1            R_Rd2           
+           R    1               1            
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   50.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)     .8635  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -1.0362      
+
+( SENZ)    5.0669  ( VREF)    4.9802  (N18852)   11.3470 (N18868)    4.6059     
+
+(N18960) 10.24E-06 (N19040)    5.0667 (N19118)   12.0000 (N19310)    4.6061     
+
+(N19346)   -1.0362 (N25131)    6.9858 (N25874)   -1.0362 (N25878)   -1.0362     
+
+(N194781)    5.9830                   (X_U2B.6)-87.41E-06                       
+
+(X_U2B.7)     .9050                   (X_U2B.8)     .9050                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 103.9E-06                       
+
+(X_U3A.7)   -1.0794                   (X_U3A.8)   -1.0794                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-477.8E-06                       
+
+(X_U5A.7)    5.0688                   (X_U5A.8)    5.0688                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    4.9983                      
+
+(X_U2B.11)   11.5650                  (X_U2B.12)   11.5650                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)     .8295                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)    -.8635                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    5.4585                      
+
+(X_U5A.11)   11.5640                  (X_U5A.12)   11.5640                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0419                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.010E-02
+    V_V2         5.488E-02
+    X_U3A.vb     1.039E-09
+    X_U3A.vc     1.072E-11
+    X_U3A.ve     9.974E-12
+    X_U3A.vlim  -8.635E-04
+    X_U3A.vlp   -4.086E-11
+    X_U3A.vln   -3.914E-11
+    X_U2B.vb    -8.741E-10
+    X_U2B.vc     8.821E-12
+    X_U2B.ve     1.187E-11
+    X_U2B.vlim   8.295E-04
+    X_U2B.vlp   -3.917E-11
+    X_U2B.vln   -4.083E-11
+    X_U5A.vb    -4.778E-09
+    X_U5A.vc     4.618E-12
+    X_U5A.ve     1.608E-11
+    X_U5A.vlim   4.187E-05
+    X_U5A.vlp   -3.996E-11
+    X_U5A.vln   -4.004E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   51.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    1.7718  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -2.1261      
+
+( SENZ)    5.1621  ( VREF)    4.9845  (N18852)   11.3470 (N18868)    4.6924     
+
+(N18960) 6.141E-06 (N19040)    5.1619 (N19118)   12.0000 (N19310)    4.6926     
+
+(N19346)   -2.1261 (N25131)    6.9889 (N25874)   -2.1261 (N25878)   -2.1261     
+
+(N194781)    5.9867                   (X_U2B.6)-179.7E-06                       
+
+(X_U2B.7)    1.8590                   (X_U2B.8)    1.8590                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 213.3E-06                       
+
+(X_U3A.7)   -2.2147                   (X_U3A.8)   -2.2147                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-486.8E-06                       
+
+(X_U5A.7)    5.1640                   (X_U5A.8)    5.1640                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.0848                      
+
+(X_U2B.11)   11.5650                  (X_U2B.12)   11.5650                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    1.7452                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   -1.7718                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    5.5535                      
+
+(X_U5A.11)   11.5640                  (X_U5A.12)   11.5640                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0427                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.010E-02
+    V_V2         5.488E-02
+    X_U3A.vb     2.133E-09
+    X_U3A.vc     1.181E-11
+    X_U3A.ve     8.884E-12
+    X_U3A.vlim  -1.772E-03
+    X_U3A.vlp   -4.177E-11
+    X_U3A.vln   -3.823E-11
+    X_U2B.vb    -1.797E-09
+    X_U2B.vc     7.913E-12
+    X_U2B.ve     1.278E-11
+    X_U2B.vlim   1.745E-03
+    X_U2B.vlp   -3.826E-11
+    X_U2B.vln   -4.175E-11
+    X_U5A.vb    -4.868E-09
+    X_U5A.vc     4.523E-12
+    X_U5A.ve     1.617E-11
+    X_U5A.vlim   4.266E-05
+    X_U5A.vlp   -3.996E-11
+    X_U5A.vln   -4.004E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   52.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    2.6779  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -3.2134      
+
+( SENZ)    5.2571  ( VREF)    4.9889  (N18852)   11.3470 (N18868)    4.7788     
+
+(N18960) 2.054E-06 (N19040)    5.2569 (N19118)   12.0000 (N19310)    4.7790     
+
+(N19346)   -3.2134 (N25131)    6.9920 (N25874)   -3.2134 (N25878)   -3.2134     
+
+(N194781)    5.9905                   (X_U2B.6)-271.7E-06                       
+
+(X_U2B.7)    2.8108                   (X_U2B.8)    2.8108                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 322.3E-06                       
+
+(X_U3A.7)   -3.3473                   (X_U3A.8)   -3.3473                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-495.8E-06                       
+
+(X_U5A.7)    5.2590                   (X_U5A.8)    5.2590                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.1710                      
+
+(X_U2B.11)   11.5650                  (X_U2B.12)   11.5640                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    2.6588                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   -2.6779                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    5.6483                      
+
+(X_U5A.11)   11.5640                  (X_U5A.12)   11.5630                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0434                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.009E-02
+    V_V2         5.488E-02
+    X_U3A.vb     3.223E-09
+    X_U3A.vc     1.290E-11
+    X_U3A.ve     7.797E-12
+    X_U3A.vlim  -2.678E-03
+    X_U3A.vlp   -4.268E-11
+    X_U3A.vln   -3.732E-11
+    X_U2B.vb    -2.717E-09
+    X_U2B.vc     7.007E-12
+    X_U2B.ve     1.369E-11
+    X_U2B.vlim   2.659E-03
+    X_U2B.vlp   -3.734E-11
+    X_U2B.vln   -4.266E-11
+    X_U5A.vb    -4.958E-09
+    X_U5A.vc     4.428E-12
+    X_U5A.ve     1.627E-11
+    X_U5A.vlim   4.344E-05
+    X_U5A.vlp   -3.996E-11
+    X_U5A.vln   -4.004E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   53.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    3.5818  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -4.2982      
+
+( SENZ)    5.3518  ( VREF)    4.9932  (N18852)   11.3470 (N18868)    4.8649     
+
+(N18960)-2.024E-06 (N19040)    5.3516 (N19118)   12.0000 (N19310)    4.8651     
+
+(N19346)   -4.2982 (N25131)    6.9951 (N25874)   -4.2982 (N25878)   -4.2982     
+
+(N194781)    5.9942                   (X_U2B.6)-363.5E-06                       
+
+(X_U2B.7)    3.7603                   (X_U2B.8)    3.7603                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 431.1E-06                       
+
+(X_U3A.7)   -4.4773                   (X_U3A.8)   -4.4773                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-504.7E-06                       
+
+(X_U5A.7)    5.3538                   (X_U5A.8)    5.3538                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.2569                      
+
+(X_U2B.11)   11.5650                  (X_U2B.12)   11.5640                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    3.5702                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   -3.5818                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    5.7429                      
+
+(X_U5A.11)   11.5640                  (X_U5A.12)   11.5630                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0442                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.009E-02
+    V_V2         5.488E-02
+    X_U3A.vb     4.311E-09
+    X_U3A.vc     1.398E-11
+    X_U3A.ve     6.712E-12
+    X_U3A.vlim  -3.582E-03
+    X_U3A.vlp   -4.358E-11
+    X_U3A.vln   -3.642E-11
+    X_U2B.vb    -3.635E-09
+    X_U2B.vc     6.103E-12
+    X_U2B.ve     1.459E-11
+    X_U2B.vlim   3.570E-03
+    X_U2B.vlp   -3.643E-11
+    X_U2B.vln   -4.357E-11
+    X_U5A.vb    -5.047E-09
+    X_U5A.vc     4.333E-12
+    X_U5A.ve     1.636E-11
+    X_U5A.vlim   4.423E-05
+    X_U5A.vlp   -3.996E-11
+    X_U5A.vln   -4.005E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   54.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    4.4836  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -5.3804      
+
+( SENZ)    5.4463  ( VREF)    4.9975  (N18852)   11.3470 (N18868)    4.9508     
+
+(N18960)-6.091E-06 (N19040)    5.4461 (N19118)   12.0000 (N19310)    4.9510     
+
+(N19346)   -5.3804 (N25131)    6.9982 (N25874)   -5.3804 (N25878)   -5.3804     
+
+(N194781)    5.9979                   (X_U2B.6)-455.1E-06                       
+
+(X_U2B.7)    4.7076                   (X_U2B.8)    4.7076                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 539.7E-06                       
+
+(X_U3A.7)   -5.6045                   (X_U3A.8)   -5.6045                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-513.6E-06                       
+
+(X_U5A.7)    5.4484                   (X_U5A.8)    5.4484                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.3427                      
+
+(X_U2B.11)   11.5640                  (X_U2B.12)   11.5640                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    4.4794                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   -4.4836                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    5.8373                      
+
+(X_U5A.11)   11.5630                  (X_U5A.12)   11.5630                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0450                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.009E-02
+    V_V2         5.488E-02
+    X_U3A.vb     5.397E-09
+    X_U3A.vc     1.507E-11
+    X_U3A.ve     5.630E-12
+    X_U3A.vlim  -4.484E-03
+    X_U3A.vlp   -4.448E-11
+    X_U3A.vln   -3.552E-11
+    X_U2B.vb    -4.551E-09
+    X_U2B.vc     5.201E-12
+    X_U2B.ve     1.549E-11
+    X_U2B.vlim   4.479E-03
+    X_U2B.vlp   -3.552E-11
+    X_U2B.vln   -4.448E-11
+    X_U5A.vb    -5.136E-09
+    X_U5A.vc     4.239E-12
+    X_U5A.ve     1.646E-11
+    X_U5A.vlim   4.501E-05
+    X_U5A.vlp   -3.996E-11
+    X_U5A.vln   -4.005E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   55.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    5.3833  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -6.4600      
+
+( SENZ)    5.5406  ( VREF)    5.0018  (N18852)   11.3470 (N18868)    5.0365     
+
+(N18960)-10.15E-06 (N19040)    5.5404 (N19118)   12.0000 (N19310)    5.0367     
+
+(N19346)   -6.4600 (N25131)    7.0013 (N25874)   -6.4600 (N25878)   -6.4600     
+
+(N194781)    6.0016                   (X_U2B.6)-546.5E-06                       
+
+(X_U2B.7)    5.6526                   (X_U2B.8)    5.6526                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 648.0E-06                       
+
+(X_U3A.7)   -6.7291                   (X_U3A.8)   -6.7291                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-522.5E-06                       
+
+(X_U5A.7)    5.5427                   (X_U5A.8)    5.5427                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.4283                      
+
+(X_U2B.11)   11.5640                  (X_U2B.12)   11.5640                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    5.3865                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   -5.3833                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    5.9315                      
+
+(X_U5A.11)   11.5630                  (X_U5A.12)   11.5630                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0458                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.008E-02
+    V_V2         5.488E-02
+    X_U3A.vb     6.480E-09
+    X_U3A.vc     1.615E-11
+    X_U3A.ve     4.550E-12
+    X_U3A.vlim  -5.383E-03
+    X_U3A.vlp   -4.538E-11
+    X_U3A.vln   -3.462E-11
+    X_U2B.vb    -5.465E-09
+    X_U2B.vc     4.302E-12
+    X_U2B.ve     1.639E-11
+    X_U2B.vlim   5.386E-03
+    X_U2B.vlp   -3.461E-11
+    X_U2B.vln   -4.539E-11
+    X_U5A.vb    -5.225E-09
+    X_U5A.vc     4.145E-12
+    X_U5A.ve     1.655E-11
+    X_U5A.vlim   4.579E-05
+    X_U5A.vlp   -3.996E-11
+    X_U5A.vln   -4.005E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   56.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    6.2808  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -7.5370      
+
+( SENZ)    5.6347  ( VREF)    5.0061  (N18852)   11.3470 (N18868)    5.1220     
+
+(N18960)-14.20E-06 (N19040)    5.6345 (N19118)   12.0000 (N19310)    5.1222     
+
+(N19346)   -7.5370 (N25131)    7.0044 (N25874)   -7.5370 (N25878)   -7.5370     
+
+(N194781)    6.0053                   (X_U2B.6)-637.7E-06                       
+
+(X_U2B.7)    6.5954                   (X_U2B.8)    6.5954                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 756.0E-06                       
+
+(X_U3A.7)   -7.8511                   (X_U3A.8)   -7.8511                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-531.4E-06                       
+
+(X_U5A.7)    5.6368                   (X_U5A.8)    5.6368                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.5137                      
+
+(X_U2B.11)   11.5640                  (X_U2B.12)   11.5640                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    6.2914                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   -6.2809                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    6.0254                      
+
+(X_U5A.11)   11.5630                  (X_U5A.12)   11.5630                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0466                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.008E-02
+    V_V2         5.488E-02
+    X_U3A.vb     7.560E-09
+    X_U3A.vc     1.722E-11
+    X_U3A.ve     3.473E-12
+    X_U3A.vlim  -6.281E-03
+    X_U3A.vlp   -4.628E-11
+    X_U3A.vln   -3.372E-11
+    X_U2B.vb    -6.377E-09
+    X_U2B.vc     3.404E-12
+    X_U2B.ve     1.729E-11
+    X_U2B.vlim   6.291E-03
+    X_U2B.vlp   -3.371E-11
+    X_U2B.vln   -4.629E-11
+    X_U5A.vb    -5.314E-09
+    X_U5A.vc     4.051E-12
+    X_U5A.ve     1.664E-11
+    X_U5A.vlim   4.657E-05
+    X_U5A.vlp   -3.995E-11
+    X_U5A.vln   -4.005E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   57.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    7.1763  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -8.6116      
+
+( SENZ)    5.7285  ( VREF)    5.0104  (N18852)   11.3470 (N18868)    5.2073     
+
+(N18960)-18.24E-06 (N19040)    5.7283 (N19118)   12.0000 (N19310)    5.2076     
+
+(N19346)   -8.6116 (N25131)    7.0075 (N25874)   -8.6116 (N25878)   -8.6116     
+
+(N194781)    6.0090                   (X_U2B.6)-728.6E-06                       
+
+(X_U2B.7)    7.5360                   (X_U2B.8)    7.5360                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 863.8E-06                       
+
+(X_U3A.7)   -8.9704                   (X_U3A.8)   -8.9704                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-540.2E-06                       
+
+(X_U5A.7)    5.7307                   (X_U5A.8)    5.7307                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.5989                      
+
+(X_U2B.11)   11.5640                  (X_U2B.12)   11.5640                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    7.1942                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   -7.1763                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    6.1191                      
+
+(X_U5A.11)   11.5630                  (X_U5A.12)   11.5620                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0473                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.008E-02
+    V_V2         5.488E-02
+    X_U3A.vb     8.638E-09
+    X_U3A.vc     1.830E-11
+    X_U3A.ve     2.399E-12
+    X_U3A.vlim  -7.176E-03
+    X_U3A.vlp   -4.718E-11
+    X_U3A.vln   -3.282E-11
+    X_U2B.vb    -7.286E-09
+    X_U2B.vc     2.509E-12
+    X_U2B.ve     1.819E-11
+    X_U2B.vlim   7.194E-03
+    X_U2B.vlp   -3.281E-11
+    X_U2B.vln   -4.720E-11
+    X_U5A.vb    -5.402E-09
+    X_U5A.vc     3.957E-12
+    X_U5A.ve     1.674E-11
+    X_U5A.vlim   4.734E-05
+    X_U5A.vlp   -3.995E-11
+    X_U5A.vln   -4.005E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   58.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    8.0696  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   -9.6836      
+
+( SENZ)    5.8222  ( VREF)    5.0147  (N18852)   11.3470 (N18868)    5.2924     
+
+(N18960)-22.27E-06 (N19040)    5.8219 (N19118)   12.0000 (N19310)    5.2927     
+
+(N19346)   -9.6836 (N25131)    7.0105 (N25874)   -9.6836 (N25878)   -9.6836     
+
+(N194781)    6.0126                   (X_U2B.6)-819.4E-06                       
+
+(X_U2B.7)    8.4743                   (X_U2B.8)    8.4743                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6) 971.3E-06                       
+
+(X_U3A.7)  -10.0870                   (X_U3A.8)  -10.0870                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-549.1E-06                       
+
+(X_U5A.7)    5.8243                   (X_U5A.8)    5.8243                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.6839                      
+
+(X_U2B.11)   11.5640                  (X_U2B.12)   11.5630                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    8.0949                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)     .3992                  (X_U3A.11)   11.5750                      
+
+(X_U3A.12)   11.5750                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   -8.0696                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    6.2126                      
+
+(X_U5A.11)   11.5630                  (X_U5A.12)   11.5620                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0481                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -6.008E-02
+    V_V2         5.488E-02
+    X_U3A.vb     9.713E-09
+    X_U3A.vc     1.937E-11
+    X_U3A.ve     1.034E-12
+    X_U3A.vlim  -8.070E-03
+    X_U3A.vlp   -4.807E-11
+    X_U3A.vln   -3.193E-11
+    X_U2B.vb    -8.194E-09
+    X_U2B.vc     1.615E-12
+    X_U2B.ve     1.908E-11
+    X_U2B.vlim   8.095E-03
+    X_U2B.vlp   -3.191E-11
+    X_U2B.vln   -4.810E-11
+    X_U5A.vb    -5.491E-09
+    X_U5A.vc     3.863E-12
+    X_U5A.ve     1.683E-11
+    X_U5A.vlim   4.811E-05
+    X_U5A.vlp   -3.995E-11
+    X_U5A.vln   -4.005E-11
+
+    TOTAL POWER DISSIPATION   1.38E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   59.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    8.9608  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   10.4810      
+
+( SENZ)    5.9156  ( VREF)    5.0190  (N18852)   11.3470 (N18868)    5.3774     
+
+(N18960)    9.6519 (N19040)    5.9153 (N19118)     .1493 (N19310)    5.3776     
+
+(N19346)     .7612 (N25131)    7.0136 (N25874)    4.4349 (N25878)    2.2180     
+
+(N194781)    6.0163                   (X_U2B.6)-839.8E-06                       
+
+(X_U2B.7)    8.9279                   (X_U2B.8)    8.9279                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6)  -16.7740                       
+
+(X_U3A.7)   12.5150                   (X_U3A.8)   12.5150                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-557.9E-06                       
+
+(X_U5A.7)    5.9178                   (X_U5A.8)    5.9178                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.7687                      
+
+(X_U2B.11)   11.5640                  (X_U2B.12)   11.5630                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    -.6585                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)    9.7826                  (X_U3A.11)   12.0000                      
+
+(X_U3A.12)   11.1100                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   40.6740                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    6.3059                      
+
+(X_U5A.11)   11.5620                  (X_U5A.12)   11.5620                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0489                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -7.118E-02
+    V_V2         5.488E-02
+    X_U3A.vb    -1.677E-04
+    X_U3A.vc    -1.929E-02
+    X_U3A.ve     2.149E-11
+    X_U3A.vlim   4.067E-02
+    X_U3A.vlp    1.690E-04
+    X_U3A.vln   -8.068E-11
+    X_U2B.vb    -8.398E-09
+    X_U2B.vc     7.242E-13
+    X_U2B.ve     1.997E-11
+    X_U2B.vlim  -6.585E-04
+    X_U2B.vlp   -4.066E-11
+    X_U2B.vln   -3.934E-11
+    X_U5A.vb    -5.579E-09
+    X_U5A.vc     3.770E-12
+    X_U5A.ve     1.693E-11
+    X_U5A.vlim   4.889E-05
+    X_U5A.vlp   -3.995E-11
+    X_U5A.vln   -4.005E-11
+
+    TOTAL POWER DISSIPATION   1.55E+00  WATTS
+
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R =   60.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  DOM)    9.8499  (  VCC)   12.0000  ( -VCC)  -12.0000  ( COMP)   10.4820      
+
+( SENZ)    6.0088  ( VREF)    5.0233  (N18852)   11.3470 (N18868)    5.4621     
+
+(N18960)   10.1370 (N19040)    6.0085 (N19118)     .1493 (N19310)    5.4623     
+
+(N19346)     .7612 (N25131)    7.0166 (N25874)    4.4351 (N25878)    2.2180     
+
+(N194781)    6.0199                   (X_U2B.6)-926.5E-06                       
+
+(X_U2B.7)    9.8376                   (X_U2B.8)    9.8376                       
+
+(X_U2B.9)    0.0000                   (X_U3A.6)  -16.8120                       
+
+(X_U3A.7)   12.5150                   (X_U3A.8)   12.5150                       
+
+(X_U3A.9)    0.0000                   (X_U5A.6)-566.7E-06                       
+
+(X_U5A.7)    6.0110                   (X_U5A.8)    6.0110                       
+
+(X_U5A.9)    0.0000                   (X_U2B.10)    5.8533                      
+
+(X_U2B.11)   11.5630                  (X_U2B.12)   11.5630                      
+
+(X_U2B.53)    9.6842                  (X_U2B.54)   -9.6842                      
+
+(X_U2B.90)    -.2473                  (X_U2B.91)   40.0000                      
+
+(X_U2B.92)  -40.0000                  (X_U2B.99)    0.0000                      
+
+(X_U3A.10)   10.2660                  (X_U3A.11)   12.0000                      
+
+(X_U3A.12)   11.1080                  (X_U3A.53)    9.6842                      
+
+(X_U3A.54)   -9.6842                  (X_U3A.90)   40.6750                      
+
+(X_U3A.91)   40.0000                  (X_U3A.92)  -40.0000                      
+
+(X_U3A.99)    0.0000                  (X_U5A.10)    6.3989                      
+
+(X_U5A.11)   11.5620                  (X_U5A.12)   11.5620                      
+
+(X_U5A.53)    9.6842                  (X_U5A.54)   -9.6842                      
+
+(X_U5A.90)     .0497                  (X_U5A.91)   40.0000                      
+
+(X_U5A.92)  -40.0000                  (X_U5A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -7.077E-02
+    V_V2         5.488E-02
+    X_U3A.vb    -1.681E-04
+    X_U3A.vc    -1.969E-02
+    X_U3A.ve     2.149E-11
+    X_U3A.vlim   4.067E-02
+    X_U3A.vlp    1.694E-04
+    X_U3A.vln   -8.068E-11
+    X_U2B.vb    -9.265E-09
+    X_U2B.vc    -6.504E-13
+    X_U2B.ve     2.086E-11
+    X_U2B.vlim  -2.473E-04
+    X_U2B.vlp   -4.025E-11
+    X_U2B.vln   -3.975E-11
+    X_U5A.vb    -5.667E-09
+    X_U5A.vc     3.676E-12
+    X_U5A.ve     1.702E-11
+    X_U5A.vlim   4.966E-05
+    X_U5A.vlp   -3.995E-11
+    X_U5A.vln   -4.005E-11
+
+    TOTAL POWER DISSIPATION   1.55E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/22/23 16:58:16 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-praguri"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\praguri.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM R =   60.0000E+03
+
+
+******************************************************************************
+
+
+
+  License check-out time            =         .64
+  Total job time (using Solver 1)   =         .38
+

@@ -1,0 +1,5 @@
+ lib="d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\redled.lib", offset=1043, size=51
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\diode.lib, offset=27918, size=156
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\ebipolar.lib, offset=6409, size=365
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\ebipolar.lib, offset=10605, size=385
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\opamp.lib, offset=96448, size=1161

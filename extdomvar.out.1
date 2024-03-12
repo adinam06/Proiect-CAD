@@ -1,0 +1,81 @@
+
+**** 05/16/23 08:09:00 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-extdomvar"  [ d:\anul 2.2\sem 2\cad\proiect\proiectfinal-pspicefiles\schematic1\extdomvar.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "extdomvar.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\stefa\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 50k 60k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECTFINAL
+X_U1A         N18952 N19040 VCC -VCC N19040 TL082
+R_R         0 N18852 R_R 120k TC=0,0 
+.model        R_R RES R=1 DEV=1% TC1=0 TC2=0
+R_R72         N194781 N194221 R_R72 0.2k TC=0,0 
+.model        R_R72 RES R=1 DEV=2% TC1=0 TC2=0
+R_Rs         0 N18952  {r} TC=0,0 
+R_R4         0 N19310 R_R4 110k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+R_R8         VREF 0 R_R8 1k TC=0,0 
+.model        R_R8 RES R=1 DEV=2% TC1=0 TC2=0
+R_Rd1         N193581 N18968 R_Rd1 0.3k TC=0,0 
+.model        R_Rd1 RES R=1 DEV=5% TC1=0 TC2=0
+V_V3         VCC 0 12V
+Q_Q13         N18852 N18852 VCC BC556A 
+R_R6         N18960 N18968 R_R6 1.2k TC=0,0 
+.model        R_R6 RES R=1 DEV=5% TC1=0 TC2=0
+R_R71         N194221 VCC R_R71 1k TC=0,0 
+.model        R_R71 RES R=1 DEV=2% TC1=0 TC2=0
+R_R2         N18868 N18876 R_R2 110k TC=0,0 
+.model        R_R2 RES R=1 DEV=1% TC1=0 TC2=0
+R_R10         N18876 N18960 R_R10 1k TC=0,0 
+.model        R_R10 RES R=1 DEV=5% TC1=0 TC2=0
+D_D4         N19118 VCC D1N4447 
+R_Rr         N19118 VCC  390 TC=0,0 
+R_Rd2         N194401 N193581 R_Rd2 0.11k TC=0,0 
+.model        R_Rd2 RES R=1 DEV=5% TC1=0 TC2=0
+X_U3A         N18960 0 VCC -VCC N18968 TL082
+R_Rb         N18968 N19346 R_Rb 18k TC=0,0 
+.model        R_Rb RES R=1 DEV=5% TC1=0 TC2=0
+Q_Q12         N19118 N19346 0 BC546B 
+R_R73         N194781 VREF R_R73 0.2k TC=0,0 
+.model        R_R73 RES R=1 DEV=2% TC1=0 TC2=0
+X_U2B         N19310 N18868 VCC -VCC N18876 TL082
+R_R3         N19040 N19310 R_R3 11k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+V_V2         -VCC 0 -12V
+R_R1         VREF N18868 R_R1 11k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q14         N18952 N18852 VCC BC556A 
+D_D5         N194401 0 redled 
+.PARAM  r=50k
+
+**** RESUMING extdomvar.cir ****
+.END
+
+
+ERROR(ORPSIM-15113): Model redled used by D_D5 is undefined
+

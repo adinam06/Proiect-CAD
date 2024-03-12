@@ -1,0 +1,236 @@
+
+**** 05/15/23 21:40:07 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-varsenz"  [ D:\ANUL 2.2\Sem 2\CAD\Proiect\proiectfinal-PSpiceFiles\SCHEMATIC1\varsenz.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "varsenz.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\stefa\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM r 50k 60k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECTFINAL
+X_U1A         N18952 N19040 VCC -VCC N19040 TL082
+R_R         0 N18852 R_R 120k TC=0,0 
+.model        R_R RES R=1 DEV=1% TC1=0 TC2=0
+R_R72         N194781 N194221 R_R72 0.2k TC=0,0 
+.model        R_R72 RES R=1 DEV=2% TC1=0 TC2=0
+R_Rs         0 N18952  {r} TC=0,0 
+R_R4         0 N19310 R_R4 110k TC=0,0 
+.model        R_R4 RES R=1 DEV=1% TC1=0 TC2=0
+R_R8         VREF 0 R_R8 1k TC=0,0 
+.model        R_R8 RES R=1 DEV=2% TC1=0 TC2=0
+R_Rd1         N193581 N18968 R_Rd1 0.3k TC=0,0 
+.model        R_Rd1 RES R=1 DEV=5% TC1=0 TC2=0
+V_V3         VCC 0 12V
+Q_Q13         N18852 N18852 VCC BC556A 
+R_R6         N18960 N18968 R_R6 1.2k TC=0,0 
+.model        R_R6 RES R=1 DEV=5% TC1=0 TC2=0
+R_R71         N194221 VCC R_R71 1k TC=0,0 
+.model        R_R71 RES R=1 DEV=2% TC1=0 TC2=0
+R_R2         N18868 N18876 R_R2 110k TC=0,0 
+.model        R_R2 RES R=1 DEV=1% TC1=0 TC2=0
+R_R10         N18876 N18960 R_R10 1k TC=0,0 
+.model        R_R10 RES R=1 DEV=5% TC1=0 TC2=0
+D_D4         N19118 VCC D1N4447 
+R_Rr         N19118 VCC  390 TC=0,0 
+R_Rd2         0 N193581 R_Rd2 0.11k TC=0,0 
+.model        R_Rd2 RES R=1 DEV=5% TC1=0 TC2=0
+X_U3A         N18960 0 VCC -VCC N18968 TL082
+R_Rb         N18968 N19346 R_Rb 18k TC=0,0 
+.model        R_Rb RES R=1 DEV=5% TC1=0 TC2=0
+Q_Q12         N19118 N19346 0 BC546B 
+R_R73         N194781 VREF R_R73 0.2k TC=0,0 
+.model        R_R73 RES R=1 DEV=2% TC1=0 TC2=0
+X_U2B         N19310 N18868 VCC -VCC N18876 TL082
+R_R3         N19040 N19310 R_R3 11k TC=0,0 
+.model        R_R3 RES R=1 DEV=1% TC1=0 TC2=0
+V_V2         -VCC 0 -12V
+R_R1         VREF N18868 R_R1 11k TC=0,0 
+.model        R_R1 RES R=1 DEV=1% TC1=0 TC2=0
+Q_Q14         N18952 N18852 VCC BC556A 
+.PARAM  r=50k
+
+**** RESUMING varsenz.cir ****
+.END
+
+**** 05/15/23 21:40:07 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-varsenz"  [ D:\ANUL 2.2\Sem 2\CAD\Proiect\proiectfinal-PSpiceFiles\SCHEMATIC1\varsenz.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4447         X_U1A.dx        X_U1A.dy        X_U3A.dx        
+          IS    1.071000E-09  800.000000E-18  800.000000E-18  800.000000E-18 
+           N    1.698                                                        
+         ISR    2.149000E-09                                                 
+          BV  100                                                            
+         IBV  100.000000E-06                                                 
+          RS     .8383                          1.000000E-03                 
+          TT   11.540000E-09                                                 
+         CJO    2.000000E-12                   10.000000E-12                 
+          VJ     .5                                                          
+           M     .3333                                                       
+
+
+               X_U3A.dy        X_U2B.dx        X_U2B.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03                    1.000000E-03 
+         CJO   10.000000E-12                   10.000000E-12 
+
+
+**** 05/15/23 21:40:07 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-varsenz"  [ D:\ANUL 2.2\Sem 2\CAD\Proiect\proiectfinal-PSpiceFiles\SCHEMATIC1\varsenz.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC556A          BC546B          
+               PNP             NPN             
+       LEVEL    1               1            
+          IS    1.020000E-15    7.049000E-15 
+          BF  174.7           374.6          
+          NF    1               1            
+         VAF   73.79           62.79         
+         IKF     .1023           .08157      
+         ISE   10.730000E-15   68.000000E-15 
+          NE    1.644           1.576        
+          BR    4.432           1            
+          NR    1               1            
+         IKR    2.237           3.924        
+         ISC   14.740000E-15   12.400000E-15 
+          NC    1.296           1.835        
+          NK     .5033           .4767       
+         ISS    0               0            
+          RE    0               0            
+          RC    1.039            .9747       
+         CJE   30.000000E-12   11.500000E-12 
+         VJE     .5              .5          
+         MJE     .3333           .6715       
+         CJC    9.810000E-12    5.250000E-12 
+         VJC     .4865           .5697       
+         MJC     .332            .3147       
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  830.300000E-12  410.200000E-12 
+         XTF   10.32           40.06         
+         VTF   10              10            
+         ITF     .8981          1.491        
+          TR   10.000000E-09   10.000000E-09 
+         XTB    1.5             1.5          
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.42         
+           D     .52             .87         
+
+
+**** 05/15/23 21:40:07 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-varsenz"  [ D:\ANUL 2.2\Sem 2\CAD\Proiect\proiectfinal-PSpiceFiles\SCHEMATIC1\varsenz.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.jx1       X_U1A.jx2       X_U3A.jx1       X_U3A.jx2       
+               NJF             NJF             NJF             NJF             
+         VTO   -1              -1              -1              -1            
+        BETA  222.070000E-06  222.070000E-06  222.070000E-06  222.070000E-06 
+          IS  100.000000E-12  100.000000E-12  100.000000E-12  100.000000E-12 
+
+
+               X_U2B.jx1       X_U2B.jx2       
+               NJF             NJF             
+         VTO   -1              -1            
+        BETA  222.070000E-06  222.070000E-06 
+          IS  100.000000E-12  100.000000E-12 
+
+
+**** 05/15/23 21:40:07 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-varsenz"  [ D:\ANUL 2.2\Sem 2\CAD\Proiect\proiectfinal-PSpiceFiles\SCHEMATIC1\varsenz.sim ] 
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R             R_R72           R_R4            R_R8            
+           R    1               1               1               1            
+
+
+               R_Rd1           R_R6            R_R71           R_R2            
+           R    1               1               1               1            
+
+
+               R_R10           R_Rd2           R_Rb            R_R73           
+           R    1               1               1               1            
+
+
+               R_R3            R_R1            
+           R    1               1            
+
+
+
+          JOB CONCLUDED
+
+**** 05/15/23 21:40:07 **** PSpice 22.1.0 (9 December 2022) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-varsenz"  [ D:\ANUL 2.2\Sem 2\CAD\Proiect\proiectfinal-PSpiceFiles\SCHEMATIC1\varsenz.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =         .64
+  Total job time (using Solver 1)   =         .11
+
